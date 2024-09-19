@@ -5,6 +5,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -32,6 +33,9 @@ public class MainActivity extends AppCompatActivity {
                     int resultado = edadint * 7;
                     String resultadoString = "La edad del canino es de: " + resultado + " años";
                     result.setText(resultadoString);
+                }
+                else{
+                    Toast.makeText(MainActivity.this, "Se debe llenar el campo", Toast.LENGTH_LONG).show();
                 }
             }
         });
